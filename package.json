@@ -1,0 +1,33 @@
+{
+  "name": "transparenciabrapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizcarlospedrosogomes/transparenciaBRAPI.git"
+  },
+  "keywords": [
+    "api",
+    "transparencia",
+    "BR",
+    "Brasil"
+  ],
+  "author": "Luiz Carlos Pedroso Gomes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luizcarlospedrosogomes/transparenciaBRAPI/issues"
+  },
+  "homepage": "https://github.com/luizcarlospedrosogomes/transparenciaBRAPI#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}

@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  server:
+    container_name: NODEJS_SRV_TRANSP_BR
+    build: '.'
+    volumes:
+      - .:/node-app
+      - ./node_modules:/node-app/node_modules
+    environment:
+      NODE_ENV: development
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - '9000:9000'
+
+  db:
+    image: "mariadb:${MARIADB_VERSION}"
+    restart: 'always'
+    volumes: 
+      - /var/lib/mysql/data:/data
+      - /var/lib/mysql/logs:/log/db
+      - /var/docker/mariadb/conf:/etc/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
