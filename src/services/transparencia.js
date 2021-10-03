@@ -1,6 +1,6 @@
 const axios   = require('axios');
 require('dotenv').config()
-const hostAPITransparencia  = 'http://www.portaltransparencia.gov.br/api-de-dados';
+const hostAPITransparencia  = 'https://'+process.env.HOST_TRANSPARENCIA+'/api-de-dados';
 
 const request = (method, path) =>{  
     const config = {
