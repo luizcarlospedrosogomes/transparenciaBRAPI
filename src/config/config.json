@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "api",
+    "database": "br_api",
     "host": "db",
     "port":"3306",
     "dialect": "mariadb"      

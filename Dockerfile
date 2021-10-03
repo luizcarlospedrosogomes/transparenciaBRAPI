@@ -9,7 +9,7 @@ RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then groupmod --g
 WORKDIR /workspace
 
 COPY package.json . 
-
+RUN npm install -g sequelize-cli
 RUN npm install --quiet
 
 RUN npm install nodemon -g --quiet
@@ -19,3 +19,4 @@ COPY . .
 EXPOSE 9000
 
 CMD npm start
+CMD sequelize db:migrate
